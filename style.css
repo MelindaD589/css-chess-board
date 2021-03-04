@@ -36,22 +36,32 @@ main {
 
 .fields {
   grid-area: center;
-  background-color: rgb(115, 115, 155);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.fields > div {
-  width: calc(100% / 8);
+.row {
   height: calc(100% / 8);
+  display: flex;
 }
 
-.fields > div:nth-child(odd) {
+.row > div {
+  width: calc(100% / 8);
+}
+
+.row:nth-child(odd) > div:nth-child(odd) {
   background: white;
 }
 
-.fields > div:nth-child(even) {
+.row:nth-child(odd) > div:nth-child(even) {
   background: black;
+}
+.row:nth-child(even) > div:nth-child(odd) {
+  background: black;
+}
+
+.row:nth-child(even) > div:nth-child(even) {
+  background: white;
 }
 
 .right {
