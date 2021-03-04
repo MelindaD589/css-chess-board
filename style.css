@@ -36,8 +36,42 @@ main {
 
 .fields {
   grid-area: center;
+  background-color: rgb(115, 115, 155);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fields > div {
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+}
+
+.fields > div:nth-child(odd) {
+  background: white;
+}
+
+.fields > div:nth-child(even) {
+  background: black;
 }
 
 .right {
   grid-area: right;
+}
+
+.marks {
+  display: flex;
+  align-items: stretch;
+}
+.marks > ul {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.left > ul,
+.right > ul {
+  flex-direction: column-reverse;
 }
