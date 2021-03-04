@@ -12,4 +12,32 @@ main {
   height: 80vmin;
   width: 80vmin;
   border: 1px solid red;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 5% 1fr 5%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "top top top"
+    "left center right"
+    "bottom bottom bottom";
+}
+
+.top {
+  grid-area: top;
+}
+
+.bottom {
+  grid-area: bottom;
+}
+
+.left {
+  grid-area: left;
+}
+
+.fields {
+  grid-area: center;
+}
+
+.right {
+  grid-area: right;
 }
