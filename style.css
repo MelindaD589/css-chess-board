@@ -11,7 +11,6 @@ body {
 main {
   height: 80vmin;
   width: 80vmin;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   grid-template-rows: 5% 1fr 5%;
@@ -20,6 +19,7 @@ main {
     "top top top"
     "left center right"
     "bottom bottom bottom";
+  background-image: url(purty_wood.png);
 }
 
 .top {
@@ -50,18 +50,26 @@ main {
 }
 
 .row:nth-child(odd) > div:nth-child(odd) {
-  background: white;
+  background: #d68204;
+  mix-blend-mode: color-burn;
+  opacity: 50%;
 }
 
 .row:nth-child(odd) > div:nth-child(even) {
-  background: black;
+  background: #4a3c25;
+  mix-blend-mode: luminosity;
+  opacity: 60%;
 }
 .row:nth-child(even) > div:nth-child(odd) {
-  background: black;
+  background: #4a3c25;
+  mix-blend-mode: luminosity;
+  opacity: 60%;
 }
 
 .row:nth-child(even) > div:nth-child(even) {
-  background: white;
+  background: #d68204;
+  mix-blend-mode: color-burn;
+  opacity: 50%;
 }
 
 .right {
@@ -84,4 +92,25 @@ main {
 .left > ul,
 .right > ul {
   flex-direction: column-reverse;
+}
+
+.left > ul > li,
+.right > ul > li {
+  height: calc(100% / 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top > ul > li,
+.bottom > ul > li {
+  width: calc(100% / 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top,
+.bottom {
+  margin: 0 5%;
 }
