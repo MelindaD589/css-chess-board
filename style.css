@@ -1,11 +1,13 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 main {
@@ -20,6 +22,7 @@ main {
     "left center right"
     "bottom bottom bottom";
   background-image: url(purty_wood.png);
+  position: absolute;
 }
 
 .top {
@@ -113,4 +116,66 @@ main {
 .top,
 .bottom {
   margin: 0 5%;
+}
+/*Styling the 3D board*/
+
+.rotate {
+  perspective: 2000px;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.board {
+  position: relative;
+  transform-style: preserve-3d;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.front {
+  width: 80vmin;
+  height: 80vmin;
+  border: 1px solid red;
+  transform: translateZ(25vmin);
+}
+.left {
+  width: 20vmin;
+  height: 80vmin;
+  border: 1px solid green;
+  transform: translateX(25vmin) rotateY(90deg);
+}
+.back {
+  width: 80vmin;
+  height: 80vmin;
+  border: 1px solid blue;
+  transform: translateZ(-25vmin);
+}
+.right {
+  width: 20vmin;
+  height: 80vmin;
+  border: 1px solid darkgoldenrod;
+  transform: translateX(-25vmin) rotateY(90deg);
+}
+.top {
+  width: 80vmin;
+  height: 20vmin;
+  border: 1px solid magenta;
+  transform: translateY(-25vmin) rotateX(90deg);
+}
+.bottom {
+  width: 80vmin;
+  height: 20vmin;
+  border: 1px solid orange;
+  transform: translateY(25vmin) rotateX(90deg);
 }
