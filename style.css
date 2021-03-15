@@ -154,7 +154,7 @@ main {
   width: 20vmin;
   height: 80vmin;
   border: 1px solid green;
-  transform: translateX(40vmin) rotateY(90deg);
+  transform: translateX(70vmin) rotateY(90deg);
 }
 .back2 {
   width: 80vmin;
@@ -166,17 +166,17 @@ main {
   width: 20vmin;
   height: 80vmin;
   border: 1px solid darkgoldenrod;
-  transform: translateX(-40vmin) rotateY(90deg);
+  transform: translateX(-10vmin) rotateY(90deg);
 }
 .top2 {
   width: 80vmin;
   height: 20vmin;
   border: 1px solid magenta;
-  transform: translateY(-40vmin) rotateX(90deg);
+  transform: translateY(-10vmin) rotateX(90deg);
 }
 .bottom2 {
   width: 80vmin;
   height: 20vmin;
   border: 1px solid orange;
-  transform: translateY(40vmin) rotateX(90deg);
+  transform: translateY(70vmin) rotateX(90deg);
 }
